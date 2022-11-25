@@ -1,0 +1,33 @@
+<html>
+<head>
+   <title>Aplikasi CRUD python Menggunakan Flask | Kelasprogrammer.com </title>
+   <!-- <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}"> -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+</head>
+<body>
+   <div class="container">
+      <div class="col-sm-5">
+      <h2>Ubah Data Barang</h2> 
+         <form action="/edit/{{data[0]}}" method="post">
+            <div class="form-group">
+               <input type="hidden" name="id"  value="{{data[0]}}" class="form-control" />
+            </div>
+            <div class="form-group">
+               <label>Nama :</label>
+               <input type="text" name="nama"  value="{{data[1]}}" class="form-control" placeholder="Masukan nama mahasiswa" required />
+            </div>
+            <div class="form-group">
+               <label>Nim:</label>
+               <input type="text" name="nim"  value="{{data[2]}}" class="form-control" placeholder="Masukan nim" required />
+            </div>
+            <div class="form-group">
+               <label>Alamat:</label>
+               <input type="text" name="alamat"  value="{{data[3]}}" class="form-control" placeholder="Masukan alamat" required />
+            </div>
+            <button type="submit" id="Submit" name="submit" class="btn btn-primary">Edit</button>
+      </form>
+   </div>
+</div>
+</body>
+</html>
